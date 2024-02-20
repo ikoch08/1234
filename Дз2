@@ -36,23 +36,23 @@ for (int i = 0; i < N; i++) {
     cout << "Height: " << people[i].height << endl; 
 } 
  
-delete[] people; 
+delete people; 
  
 return 0; 
 }
 
 double middle(int height, int weight){
-for (const Person& person : people) { 
-    if (person.height == targetHeight) { 
-        sum += person.weight; 
-        count++; 
+    for (const Person& person : people) { 
+        if (person.height == targetHeight) { 
+            sum += person.weight; 
+            count++; 
+        } 
     } 
-} 
  
-if (count == 0) { 
-    return 0.0; 
-} 
+    if (count == 0) { 
+        return 0.0; 
+    } 
  
-return sum / count; 
-}
+    return sum / count; 
+    }
 }
